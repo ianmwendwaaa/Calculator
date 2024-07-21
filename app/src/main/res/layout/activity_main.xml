@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bacground"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/tvResult"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:id="@+id/ac"
+            android:textColor="@color/red"
+            android:onClick="allClearAction"
+            android:layout_width="25dp"
+            android:background="@android:color/transparent"
+            android:text="AC"/>
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:id="@+id/bckspc"
+            android:onClick="backSpaceAction"
+            android:layout_width="15dp"
+            android:background="@android:color/transparent"
+            android:text="⌫"/>
+        <Button
+            style="@style/buttonOperator"
+            android:id="@+id/brackets"
+            android:text="("
+            android:layout_width="3dp"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text=")"
+            android:layout_width="3dp"
+            android:id="@+id/brackets2"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonTrogonometry"
+            android:textColor="@color/purple"
+            android:id="@+id/sin"
+            android:background="@android:color/transparent"
+            android:layout_width="20dp"
+            android:text="sin"/>
+
+        <Button
+            android:id="@+id/cos"
+            style="@style/buttonNumber"
+            android:layout_width="22dp"
+            android:background="@android:color/transparent"
+            android:text="cos"
+            android:textColor="@color/purple" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="tan"
+            android:id="@+id/tan"
+            android:layout_width="20dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/purple"/>
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="log"
+            android:id="@+id/log"
+            android:textColor="@color/purple"
+            android:background="@android:color/transparent"
+            android:layout_width="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/purple"
+            android:id="@+id/fact"
+            android:layout_width="2dp"
+            android:background="@android:color/transparent"
+            android:text="x!"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="  x²"
+            android:id="@+id/square"
+            android:layout_width="2dp"
+            android:textColor="@color/purple"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/sqrt"
+            style="@style/buttonNumber"
+            android:layout_width="2dp"
+            android:background="@android:color/transparent"
+            android:text="   √"
+            android:textColor="@color/purple" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="  ÷"
+            android:layout_width="2dp"
+            android:id="@+id/divide"
+            android:background="@android:color/transparent"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/purple"
+            android:id="@+id/ln"
+            android:background="@android:color/transparent"
+            android:layout_width="7dp"
+            android:text=" ln"/>
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"
+            android:id="@+id/sept"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"
+            android:id="@+id/huit"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="9"
+            android:id="@+id/neuf"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/multiply"
+            style="@style/buttonOperator"
+            android:background="@android:color/transparent"
+            android:text="x" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="π"
+            android:id="@+id/pi"
+            android:background="@android:color/transparent"
+            android:layout_width="3dp"
+            android:textColor="@color/purple"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"
+            android:id="@+id/quatre"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"
+            android:id="@+id/cinq"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="6"
+            android:id="@+id/sois"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/add"
+            style="@style/buttonOperator"
+            android:layout_width="3dp"
+            android:background="@android:color/transparent"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="x⁻¹"
+            android:id="@+id/inv"
+            android:textColor="@color/purple"
+            android:background="@android:color/transparent"
+            android:layout_width="11dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"
+            android:id="@+id/un"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"
+            android:id="@+id/deaux"
+            android:background="@android:color/transparent"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="3"
+            android:id="@+id/trois"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/buttonOperator"
+            android:background="@android:color/transparent"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/decimal"
+            style="@style/buttonNumber"
+            android:layout_width="55dp"
+            android:background="@android:color/transparent"
+            android:text="." />
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/buttonNumber"
+            android:layout_width="67dp"
+            android:background="@android:color/transparent"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/module"
+            style="@style/buttonNumber"
+            android:layout_width="76dp"
+            android:background="@android:color/transparent"
+            android:text="%" />
+
+        <Button
+            style="@style/buttonOperator"
+            android:layout_weight="2"
+            android:id="@+id/equals"
+            android:background="@android:color/transparent"
+            android:layout_width="13dp"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
